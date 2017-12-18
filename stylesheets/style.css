@@ -1,0 +1,72 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 30px;
+}
+
+.outer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.top .row{
+  display: flex;
+  flex-direction: row;
+}
+
+.top .col-2 .row {
+  height: 70px;
+}
+
+.bottom .row {
+  display: flex;
+  flex-direction: row;
+}
+
+.bottom .col-1 {
+  width: 70px;
+}
+
+.chess-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chess-board .row {
+  display: flex;
+  flex-direction: row;
+}
+
+.chess-board .row:nth-child(2n-1) .col-1:nth-child(2n) {
+  background: rgb(118, 149, 89);
+}
+.chess-board .row:nth-child(2n-1) .col-1:nth-child(2n-1) {
+  background: rgb(238, 238, 211);
+}
+
+.chess-board .row:nth-child(2n) .col-1:nth-child(2n-1) {
+  background: rgb(118, 149, 89);
+}
+.chess-board .row:nth-child(2n) .col-1:nth-child(2n) {
+  background: rgb(238, 238, 211);
+}
+
+.chess-board .col-1 {
+  width: 70px;
+  height: 70px;
+}
+
+img {
+  width: 70px;
+  height: 70px;
+}
+
+@media (hover: hover) {
+  .chess-board .col-1:hover {
+    border: solid;
+  }
+
+}

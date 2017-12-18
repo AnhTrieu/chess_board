@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chess</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" defer></script>
+  <!-- Tab Icon -->
+  <link rel="icon" href="resources/favicon.png">
+  <!-- Local stylesheet -->
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <!-- Local JS -->
+  <script defer src="script/render.js">
+  </script>
+  <script defer src="script/app.js">
+  </script>
+  <script defer src="script/move.js">
+  </script>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <header>
+    <div class="display">
+      Square: <span></span>
+    </div>
+    <select class="player-switch" name="choose-player">
+        <option value="white">White</option>
+        <option value="black">Black</option>
+    </select>
+    <label for="choose-player"> to move.</label>
+  </header>
+
+  <main>
+    <div class="container-fluid outer-container">
+      <div class="container-fluid top">
+        <div class="row">
+          <div class="col-2">
+            <div class="row rank-labels">
+              8
+            </div>
+            <div class="row rank-labels">
+              7
+            </div>
+            <div class="row rank-labels">
+              6
+            </div>
+            <div class="row rank-labels">
+              5
+            </div>
+            <div class="row rank-labels">
+              4
+            </div>
+            <div class="row rank-labels">
+              3
+            </div>
+            <div class="row rank-labels">
+              2
+            </div>
+            <div class="row rank-labels">
+              1
+            </div>
+          </div>
+          <div class="col-10">
+            <div class="container-fluid chess-board">
+              <div class="row eight">
+                <div class="col-1 a">
+
+                </div>
+                <div class="col-1 b">
+
+                </div>
+                <div class="col-1 c">
+
+                </div>
+                <div class="col-1 d">
+
+                </div>
+                <div class="col-1 e">
+
+                </div>
+                <div class="col-1 f">
+
+                </div>
+                <div class="col-1 g">
+
+                </div>
+                <div class="col-1 h">
+
+                </div>
+              </div>
+              <div class="row seven">
+                <div class="col-1 a">
+
+                </div>
+                <div class="col-1 b">
+
+                </div>
+                <div class="col-1 c">
+
+                </div>
+                <div class="col-1 d">
+
+                </div>
+                <div class="col-1 e">
+
+                </div>
+                <div class="col-1 f">
+
+                </div>
+                <div class="col-1 g">
+
+                </div>
+                <div class="col-1 h">
+
+                </div>
+              </div>
+              <div class="row six">
+                <div class="col-1 a">
+
+                </div>
+                <div class="col-1 b">
+
+                </div>
+                <div class="col-1 c">
+
+                </div>
+                <div class="col-1 d">
+
+                </div>
+                <div class="col-1 e">
+
+                </div>
+                <div class="col-1 f">
+
+                </div>
+                <div class="col-1 g">
+
+                </div>
+                <div class="col-1 h">
+
+                </div>
+              </div>
+              <div class="row five">
+                <div class="col-1 a">
+
+                </div>
+                <div class="col-1 b">
+
+                </div>
+                <div class="col-1 c">
+
+                </div>
+                <div class="col-1 d">
+
+                </div>
+                <div class="col-1 e">
+
+                </div>
+                <div class="col-1 f">
+
+                </div>
+                <div class="col-1 g">
+
+                </div>
+                <div class="col-1 h">
+
+                </div>
+              </div>
+              <div class="row four">
+                <div class="col-1 a">
+
+                </div>
+                <div class="col-1 b">
+
+                </div>
+                <div class="col-1 c">
+
+                </div>
+                <div class="col-1 d">
+
+                </div>
+                <div class="col-1 e">
+
+                </div>
+                <div class="col-1 f">
+
+                </div>
+                <div class="col-1 g">
+
+                </div>
+                <div class="col-1 h">
+
+                </div>
+              </div>
+              <div class="row three">
+                <div class="col-1 a">
+
+                </div>
+                <div class="col-1 b">
+
+                </div>
+                <div class="col-1 c">
+
+                </div>
+                <div class="col-1 d">
+
+                </div>
+                <div class="col-1 e">
+
+                </div>
+                <div class="col-1 f">
+
+                </div>
+                <div class="col-1 g">
+
+                </div>
+                <div class="col-1 h">
+
+                </div>
+              </div>
+              <div class="row two">
+                <div class="col-1 a">
+
+                </div>
+                <div class="col-1 b">
+
+                </div>
+                <div class="col-1 c">
+
+                </div>
+                <div class="col-1 d">
+
+                </div>
+                <div class="col-1 e">
+
+                </div>
+                <div class="col-1 f">
+
+                </div>
+                <div class="col-1 g">
+
+                </div>
+                <div class="col-1 h">
+
+                </div>
+              </div>
+              <div class="row one">
+                <div class="col-1 a">
+
+                </div>
+                <div class="col-1 b">
+
+                </div>
+                <div class="col-1 c">
+
+                </div>
+                <div class="col-1 d">
+
+                </div>
+                <div class="col-1 e">
+
+                </div>
+                <div class="col-1 f">
+
+                </div>
+                <div class="col-1 g">
+
+                </div>
+                <div class="col-1 h">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bottom">
+        <div class="row">
+          <div class="col-1 file-labels">
+            a
+          </div>
+          <div class="col-1 file-labels">
+            b
+          </div>
+          <div class="col-1 file-labels">
+            c
+          </div>
+          <div class="col-1 file-labels">
+            d
+          </div>
+          <div class="col-1 file-labels">
+            e
+          </div>
+          <div class="col-1 file-labels">
+            f
+          </div>
+          <div class="col-1 file-labels">
+            g
+          </div>
+          <div class="col-1 file-labels">
+            h
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+
+  </footer>
+</body>
+
+</html>
