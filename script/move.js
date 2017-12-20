@@ -14,23 +14,26 @@ board.addEventListener('click', function(e) {
   let target = e.target
   let piece = e.target.parentNode
   let square = e.target.parentNode.parentNode
+  // Listen for first click
   if (firstClick) {
     select()
-  } else {
+  }
+  // Listen for second click
+  else {
+    // Check if a square is empty
     if (target.tagName !== 'IMG') {
       move()
     }
+    // Capture, switch, deselect a piece
     else {
-        if (piece.classList.item(0) !== role) {
-          capture()
-        }
-        else {
-          if (square !== selected[0].parentNode) {
-            change()
-          } else {
-            deselect()
-          }
-        }
+      // Allow capture only if the piece is not your own
+      if (piece.classList.item(0) !== role) {
+        capture()
+      }
+      else {
+        // Switch to or deselect a piece
+        (square !== selected[0].parentNode)?change():deselect()
+      }
     }
   }
   // Select a piece
