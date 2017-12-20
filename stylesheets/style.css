@@ -2,7 +2,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 30px;
 }
 
 .outer-container {
@@ -16,7 +15,7 @@ main {
 }
 
 .top .col-2 .row {
-  height: 70px;
+  height: 60px;
 }
 
 .bottom .row {
@@ -25,7 +24,7 @@ main {
 }
 
 .bottom .col-1 {
-  width: 70px;
+  width: 60px;
 }
 
 .chess-board {
@@ -55,13 +54,13 @@ main {
 }
 
 .chess-board .col-1 {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
 }
 
 img {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
 }
 
 @media (hover: hover) {
@@ -69,4 +68,49 @@ img {
     border: solid;
   }
 
+}
+
+footer {
+  display: block;
+  margin: auto;
+  width: 480px;
+  height: 50px;
+}
+
+footer .col-1 {
+  font-weight: bold;
+}
+
+footer .container-fluid .captured {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+footer .row.black {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 25px;
+}
+
+footer .col-10.black {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+footer .row.white {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 25px;
+}
+
+footer .col-10.white {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }

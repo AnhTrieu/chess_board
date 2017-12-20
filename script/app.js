@@ -35,24 +35,24 @@ function rotateBoard() {
   let rankLabel = rank.querySelectorAll('.row')
   let file = document.querySelector('.bottom .row')
   let fileLabel = file.querySelectorAll('.col-1')
-  let blackPieces = document.querySelectorAll('.black')
-  let whitePieces = document.querySelectorAll('.white')
-    if (rotate.value === 'black') {
-      chessBoard.style.transform = 'rotate(180deg)'
-      rank.style.transform = 'rotate(180deg)'
-      rankLabel.forEach(i => i.style.transform = 'rotate(180deg)')
-      file.style.transform = 'rotate(180deg)'
-      fileLabel.forEach(i => i.style.transform = 'rotate(180deg)')
-      blackPieces.forEach(i => i.style.transform = 'rotate(180deg)')
-      whitePieces.forEach(i => i.style.transform = 'rotate(180deg)')
-    }
-    if (rotate.value === 'white') {
-      chessBoard.style.transform = ''
-      rank.style.transform = ''
-      rankLabel.forEach(i => i.style.transform = '')
-      file.style.transform = ''
-      fileLabel.forEach(i => i.style.transform = '')
-      blackPieces.forEach(i => i.style.transform = '')
-      whitePieces.forEach(i => i.style.transform = '')
-    }
+  let blackPieces = document.querySelectorAll('.chess-board .black')
+  let whitePieces = document.querySelectorAll('.chess-board .white')
+  if (rotate.value === 'black') {
+    chessBoard.style.transform = 'rotate(180deg)'
+    rank.style.transform = 'rotate(180deg)'
+    rankLabel.forEach(i => i.style.transform = 'rotate(180deg)')
+    file.style.transform = 'rotate(180deg)'
+    fileLabel.forEach(i => i.style.transform = 'rotate(180deg)')
+    blackPieces.forEach(i => i.style.transform = 'rotate(180deg)')
+    whitePieces.forEach(i => i.style.transform = 'rotate(180deg)')
+  }
+  if (rotate.value === 'white') {
+    chessBoard.style.transform = ''
+    rank.style.transform = ''
+    rankLabel.forEach(i => i.style.transform = '')
+    file.style.transform = ''
+    fileLabel.forEach(i => i.style.transform = '')
+    blackPieces.forEach(i => i.style.transform = '')
+    whitePieces.forEach(i => i.style.transform = '')
+  }
 }
