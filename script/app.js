@@ -1,9 +1,10 @@
 let squares = document.querySelectorAll('.chess-board .col-1')
 let rotate = document.querySelector('.player-switch')
+// Rotate chess board according to player
 rotate.addEventListener('change', function() {
   rotateBoard()
 })
-
+// Display name of hovered over square
 squares.forEach(function(i) {
   i.addEventListener('mouseover', function() {
     let conversion = {

@@ -1,7 +1,16 @@
+// Render a default chess board
+
 let firstRank = document.querySelectorAll('.one .col-1')
 let secondRank = document.querySelectorAll('.two .col-1')
 let eighthRank = document.querySelectorAll('.eight .col-1')
 let seventhRank = document.querySelectorAll('.seven .col-1')
+
+// Put white pieces on first and second ranks
+renderSecondRank(secondRank)
+renderFirstRank(firstRank)
+// Put black pieces on eighth and seventh ranks
+renderEighthRank(eighthRank)
+renderSeventhRank(seventhRank)
 
 function renderSecondRank(array) {
   array.forEach(function(element) {
@@ -168,8 +177,3 @@ function renderEighthRank(array) {
   }
   return recursiveLoop(array)
 }
-
-renderSecondRank(secondRank)
-renderFirstRank(firstRank)
-renderEighthRank(eighthRank)
-renderSeventhRank(seventhRank)
