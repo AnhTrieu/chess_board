@@ -49,11 +49,12 @@ board.addEventListener('click', function(e) {
   }
   // Move a piece
   function move() {
-    // if (validateBishopMove(selected[0], target) === true) {
+    console.log(pieceIdentifier(selected[0], target));
+    if (pieceIdentifier(selected[0], target) === true) {
       target.append(selected[0])
       selected.pop()
       firstClick = true
-  // }
+    }
   }
   // Deselect a piece
   function deselect() {

@@ -16,6 +16,7 @@ function renderSecondRank(array) {
   array.forEach(function(element) {
     let whitePawn = document.createElement('div')
     whitePawn.classList.add('white', 'pawn')
+    whitePawn.id = 'first-move'
     let whitePawnIcon = document.createElement('img')
     whitePawnIcon.src = "resources/white_pawn.png"
     whitePawn.append(whitePawnIcon)
@@ -27,6 +28,7 @@ function renderSeventhRank(array) {
   array.forEach(function(element) {
     let blackPawn = document.createElement('div')
     blackPawn.classList.add('black', 'pawn')
+    blackPawn.id = 'first-move'
     let blackPawnIcon = document.createElement('img')
     blackPawnIcon.src = "resources/black_pawn.png"
     blackPawn.append(blackPawnIcon)
