@@ -100,10 +100,10 @@ function renderScore() {
   let capturedWhitePieces = capturedWhite.children
 
   for (let key in scores) {
-    for (let i = 0; i < capturedWhitePieces.length; i++) {
+    for (let i = 0; i < capturedBlackPieces.length; i++) {
       if (capturedWhitePieces[i].classList.item(1) === key) blackNum += scores[key]
     }
-    for (let i = 0; i < capturedBlackPieces.length; i++) {
+    for (let i = 0; i < capturedWhitePieces.length; i++) {
       if (capturedBlackPieces[i].classList.item(1) === key) whiteNum += scores[key]
     }
   }
@@ -113,9 +113,9 @@ function renderScore() {
     whiteScore.textContent = ''
   } else if (whiteNum > blackNum) {
     blackScore.textContent = ''
-    whiteScore.textContent =  ' +' + (whiteNum - blackNum)
+    whiteScore.textContent = '' + '+' + (whiteNum - blackNum)
   } else {
     whiteScore.textContent = ''
-    blackScore.textContent = ' +' + (blackNum - whiteNum)
+    blackScore.textContent = '' + '+' + (blackNum - whiteNum)
   }
 }
