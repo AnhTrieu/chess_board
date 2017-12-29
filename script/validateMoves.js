@@ -2,7 +2,6 @@ let fileConversion = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
 let rankConversion = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']
 
 function pieceIdentifier (start, destination) {
-
   if (start.classList.item(1) === 'pawn') return validateP(start, destination)
   if (start.classList.item(1) === 'king') return validateK(start, destination)
   if (start.classList.item(1) === 'knight') return validateN(start, destination)
@@ -309,6 +308,7 @@ function validateK(start, destination) {
 
 function validateP(start, destination) {
   let legal = []
+  let legalCapture = []
   let x = start.parentNode.classList.item(1)
   let y = rankConversion.indexOf(start.parentNode.parentNode.classList.item(1)) + 1
 
@@ -330,6 +330,18 @@ function validateP(start, destination) {
       legal.push([x, rankConversion[y - 2]])
     }
   }
-  
-  return legal.some(i => ((destination.classList.item(1) === i[0]) && (destination.parentNode.classList.item(1) === i[1])) ? true : false)
+  // Calculate legal capture moves
+  if (start.classList.item(0) === 'white') {
+    legalCapture.push([fileConversion[fileConversion.indexOf(x) - 1], rankConversion[y]], [fileConversion[fileConversion.indexOf(x) + 1], rankConversion[y]])
+  }
+  else {
+    legalCapture.push([fileConversion[fileConversion.indexOf(x) - 1], rankConversion[y - 2]], [fileConversion[fileConversion.indexOf(x) + 1], rankConversion[y - 2]])
+  }
+  // Check if moving or capturing
+  if (!destination.childNodes[1]) {
+    return legal.some(i => ((destination.classList.item(1) === i[0]) && (destination.parentNode.classList.item(1) === i[1])) ? true : false)
+  } else {
+    return legalCapture.some(i => ((destination.classList.item(1) === i[0]) && (destination.parentNode.classList.item(1) === i[1])) ? true : false)
+  }
+
 }
